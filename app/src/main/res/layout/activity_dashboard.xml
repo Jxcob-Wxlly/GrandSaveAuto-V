@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Welcome + Rank -->
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome User!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Novice"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:paddingBottom="16dp"/>
+
+    <!-- Coins, Streak, Level, EXP -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/tvCoins"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Coins: 0"/>
+
+        <TextView
+            android:id="@+id/tvStreak"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Streak: 0"/>
+
+        <TextView
+            android:id="@+id/tvLevel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="LVL 1"/>
+
+        <TextView
+            android:id="@+id/tvExp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="EXP: 0/100"/>
+    </LinearLayout>
+
+    <!-- RPG Stats -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:weightSum="5">
+
+        <TextView android:id="@+id/tvAtk" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="ATK: 0"/>
+        <TextView android:id="@+id/tvDef" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="DEF: 0"/>
+        <TextView android:id="@+id/tvDex" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="DEX: 0"/>
+        <TextView android:id="@+id/tvInt" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="INT: 0"/>
+        <TextView android:id="@+id/tvLuk" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="LUK: 0"/>
+    </LinearLayout>
+
+    <!-- Bank Balance + Monthly Budget -->
+    <TextView
+        android:id="@+id/tvBankBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capitec Balance: R0.00"
+        android:paddingTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvMonthlyBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monthly Budget: R0.00"
+        android:paddingBottom="16dp"/>
+
+    <!-- Action Buttons -->
+    <Button
+        android:id="@+id/btnAddExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Expense"
+        android:padding="12dp"/>
+
+    <Button
+        android:id="@+id/btnAnalytics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Analytics"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvDashboardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dashboard"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="16dp"/>
+
+        <!-- XP Progress -->
+        <ProgressBar
+            android:id="@+id/progressXP"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:max="100"
+            android:progress="40"
+            app:layout_constraintTop_toBottomOf="@id/tvDashboardTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp"/>
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnAddExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Expense"
+            app:layout_constraintTop_toBottomOf="@id/progressXP"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="16dp"/>
+
+        <Button
+            android:id="@+id/btnAnalytics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Analytics"
+            app:layout_constraintTop_toBottomOf="@id/progressXP"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp"/>
+
+        <!-- Footer -->
+        <TextView
+            android:id="@+id/tvFooter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keep logging daily to earn streaks!"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="12dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

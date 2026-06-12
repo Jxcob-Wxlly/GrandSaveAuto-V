@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title -->
+        <EditText
+            android:id="@+id/etReminderTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Reminder Title"
+            android:inputType="text"/>
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/etReminderDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:inputType="text"/>
+
+        <!-- Amount -->
+        <EditText
+            android:id="@+id/etReminderAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount (R)"
+            android:inputType="numberDecimal"/>
+
+        <!-- Due Date -->
+        <EditText
+            android:id="@+id/etReminderDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Due Date (YYYY-MM-DD)"
+            android:inputType="date"/>
+
+        <!-- Recurrence -->
+        <Spinner
+            android:id="@+id/spinnerRecurrence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/recurrence_options"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Save Reminder -->
+        <Button
+            android:id="@+id/btnSaveReminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Reminder"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+</ScrollView>

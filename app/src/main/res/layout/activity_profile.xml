@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- User Info -->
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username: Jacob"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="12dp"/>
+
+        <!-- Streaks -->
+        <TextView
+            android:id="@+id/tvStreaks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Streak: 5 days"
+            android:paddingBottom="12dp"/>
+
+        <!-- Badges -->
+        <TextView
+            android:id="@+id/tvBadges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Badges: Saver, Budget Master"
+            android:paddingBottom="12dp"/>
+
+        <!-- Stats -->
+        <TextView
+            android:id="@+id/tvStats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Expenses Logged: 25\nXP: 250\nLevel: 3"
+            android:paddingBottom="12dp"/>
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"/>
+    </LinearLayout>
+</ScrollView>

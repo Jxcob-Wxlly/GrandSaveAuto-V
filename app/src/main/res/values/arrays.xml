@@ -1,0 +1,27 @@
+<resources>
+    <string-array name="time_ranges">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item>All</item>
+        <item>Food</item>
+        <item>Transport</item>
+        <item>Entertainment</item>
+        <item>Shopping</item>
+        <item>Bills</item>
+        <item>Other</item>
+    </string-array>
+</resources>
+<resources>
+<string-array name="recurrence_options">
+    <item>None</item>
+    <item>Daily</item>
+    <item>Weekly</item>
+    <item>Monthly</item>
+    <item>Yearly</item>
+</string-array>
+</resources>
